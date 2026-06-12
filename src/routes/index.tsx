@@ -247,9 +247,6 @@ function Benefits() {
               </div>
               <h3 className="mt-6 font-display text-2xl font-semibold text-navy">{b.title}</h3>
               <p className="mt-3 leading-relaxed text-muted-foreground">{b.body}</p>
-              <div className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-crimson opacity-0 -translate-x-2 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-                Learn more <ArrowRight className="h-4 w-4" />
-              </div>
             </div>
           ))}
         </div>
