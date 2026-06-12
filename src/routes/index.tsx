@@ -17,6 +17,7 @@ import {
 import heroFlag from "@/assets/hero-flag.jpg";
 import networking from "@/assets/networking.jpg";
 import eagle from "@/assets/eagle.jpg";
+import logoAsset from "@/assets/logo.png.asset.json";
 import { useReveal } from "@/hooks/use-reveal";
 
 
@@ -83,9 +84,16 @@ function Nav() {
             : ""
         }`}
       >
-        <a href="#top" className="flex flex-col">
-          <div className={`text-xs font-semibold tracking-[0.2em] ${scrolled ? "text-cream/70" : "text-cream/70"}`}>OSCEOLA</div>
-          <div className={`-mt-0.5 font-display text-sm font-semibold ${scrolled ? "text-cream" : "text-cream"}`}>Republican Business Network</div>
+        <a href="#top" className="flex items-center gap-3 group">
+          <img
+            src={logoAsset.url}
+            alt="Osceola Republican Business Network logo"
+            className="h-11 w-11 rounded-full bg-cream/95 p-0.5 shadow-elegant transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
+          />
+          <div className="flex flex-col leading-tight">
+            <span className="text-[0.65rem] font-semibold tracking-[0.2em] text-cream/70">OSCEOLA</span>
+            <span className="font-display text-sm font-semibold text-cream">Republican Business Network</span>
+          </div>
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-cream/80">
           <a href="#benefits" className="hover:text-cream transition">Why Join</a>
