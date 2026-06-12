@@ -146,7 +146,7 @@ function Hero() {
         />
       </div>
 
-      <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-6 pt-32 pb-24 text-center">
+      <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-6 pt-32 pb-40 text-center">
         <div className="reveal inline-flex items-center gap-2 rounded-full border border-cream/20 bg-cream/5 px-4 py-1.5 text-xs font-medium tracking-wide text-cream/90 backdrop-blur-md">
           <Sparkles className="h-3.5 w-3.5 text-gold" />
           A New Community of Business Leaders
