@@ -171,33 +171,6 @@ function Hero() {
   );
 }
 
-function FloatingStars() {
-  const stars = Array.from({ length: 18 });
-  return (
-    <div className="pointer-events-none absolute inset-0 overflow-hidden">
-      {stars.map((_, i) => {
-        const left = (i * 53) % 100;
-        const top = (i * 37) % 100;
-        const delay = (i % 6) * 0.7;
-        const size = 8 + (i % 4) * 3;
-        return (
-          <Star
-            key={i}
-            className="absolute fill-gold/30 text-gold/30"
-            style={{
-              left: `${left}%`,
-              top: `${top}%`,
-              width: size,
-              height: size,
-              animation: `float ${5 + (i % 4)}s ease-in-out ${delay}s infinite`,
-              opacity: 0.4,
-            }}
-          />
-        );
-      })}
-    </div>
-  );
-}
 
 function Stats() {
   const items = [
