@@ -221,20 +221,18 @@ function FloatingStars() {
 
 function Stats() {
   const items = [
-    { value: 100, suffix: "+", label: "Founding Members" },
-    { value: 24, suffix: "/7", label: "Community Access" },
-    { value: 12, suffix: "", label: "Monthly Events" },
-    { value: 100, suffix: "%", label: "Member-First" },
+    { icon: Users, label: "Members" },
+    { icon: HandshakeIcon, label: "Partnerships" },
+    { icon: TrendingUp, label: "Growth" },
+    { icon: ShieldCheck, label: "Trust" },
   ];
   return (
     <section className="relative -mt-16 px-6">
       <div className="mx-auto grid max-w-6xl grid-cols-2 gap-4 rounded-3xl border border-border bg-card p-8 shadow-elegant md:grid-cols-4 md:p-12">
         {items.map((it, i) => (
           <div key={it.label} className="reveal text-center" style={{ transitionDelay: `${i * 80}ms` }}>
-            <div className="font-display text-4xl font-semibold text-navy md:text-5xl">
-              <Counter to={it.value} suffix={it.suffix} />
-            </div>
-            <div className="mt-2 text-xs font-medium uppercase tracking-wider text-muted-foreground">
+            <it.icon className="mx-auto h-8 w-8 text-crimson" />
+            <div className="mt-3 font-display text-xl font-semibold text-navy md:text-2xl">
               {it.label}
             </div>
           </div>
