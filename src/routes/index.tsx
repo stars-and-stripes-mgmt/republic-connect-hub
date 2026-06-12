@@ -494,15 +494,17 @@ function Footer() {
   return (
     <footer className="border-t border-border bg-navy-deep px-6 py-12 text-cream/70">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 md:flex-row">
-        <div className="flex items-center gap-3">
-          <div className="grid h-9 w-9 place-items-center rounded-xl bg-crimson">
-            <Star className="h-4 w-4 fill-cream text-cream" />
-          </div>
-          <div className="text-sm">
+        <a href="#top" className="flex items-center gap-3 group">
+          <img
+            src={logoAsset.url}
+            alt="Osceola Republican Business Network logo"
+            className="h-9 w-9 rounded-full bg-cream/95 p-0.5 shadow-elegant transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
+          />
+          <div className="text-sm leading-tight">
             <div className="font-semibold text-cream">Osceola Republican Business Network</div>
             <div className="text-xs text-cream/50">Connect. Grow. Lead.</div>
           </div>
-        </div>
+        </a>
         <div className="text-xs text-cream/50">
           © {new Date().getFullYear()} Osceola Republican Business Network. All rights reserved.
         </div>
