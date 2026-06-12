@@ -18,7 +18,7 @@ import heroFlag from "@/assets/hero-flag.jpg";
 import networking from "@/assets/networking.jpg";
 import eagle from "@/assets/eagle.jpg";
 import { useReveal } from "@/hooks/use-reveal";
-import { Counter } from "@/components/Counter";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -134,8 +134,6 @@ function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-navy-deep/40 via-navy-deep/60 to-navy-deep" />
 
-      {/* Floating stars */}
-      <FloatingStars />
 
       <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-6 pt-32 pb-24 text-center">
         <div className="reveal inline-flex items-center gap-2 rounded-full border border-cream/20 bg-cream/5 px-4 py-1.5 text-xs font-medium tracking-wide text-cream/90 backdrop-blur-md">
@@ -163,24 +161,6 @@ function Hero() {
           </a>
         </div>
 
-        {/* Hero glass card preview */}
-        <div className="reveal mt-20 grid w-full max-w-4xl grid-cols-2 gap-4 sm:grid-cols-4" style={{ transitionDelay: "400ms" }}>
-          {[
-            { icon: Users, label: "Members" },
-            { icon: HandshakeIcon, label: "Partnerships" },
-            { icon: TrendingUp, label: "Growth" },
-            { icon: ShieldCheck, label: "Trust" },
-          ].map(({ icon: Icon, label }, i) => (
-            <div
-              key={label}
-              className="glass-dark group rounded-2xl p-5 transition-all duration-500 hover:-translate-y-1 hover:border-gold/40"
-              style={{ animation: `float 6s ease-in-out ${i * 0.3}s infinite` }}
-            >
-              <Icon className="mx-auto h-6 w-6 text-gold transition-transform group-hover:scale-110" />
-              <div className="mt-2 text-xs font-medium tracking-wide text-cream/70">{label}</div>
-            </div>
-          ))}
-        </div>
       </div>
 
       {/* Scroll hint */}
@@ -191,33 +171,6 @@ function Hero() {
   );
 }
 
-function FloatingStars() {
-  const stars = Array.from({ length: 18 });
-  return (
-    <div className="pointer-events-none absolute inset-0 overflow-hidden">
-      {stars.map((_, i) => {
-        const left = (i * 53) % 100;
-        const top = (i * 37) % 100;
-        const delay = (i % 6) * 0.7;
-        const size = 8 + (i % 4) * 3;
-        return (
-          <Star
-            key={i}
-            className="absolute fill-gold/30 text-gold/30"
-            style={{
-              left: `${left}%`,
-              top: `${top}%`,
-              width: size,
-              height: size,
-              animation: `float ${5 + (i % 4)}s ease-in-out ${delay}s infinite`,
-              opacity: 0.4,
-            }}
-          />
-        );
-      })}
-    </div>
-  );
-}
 
 function Stats() {
   const items = [
@@ -428,7 +381,7 @@ function CTA() {
     <section id="join" className="relative overflow-hidden px-6 py-32">
       <div className="mx-auto max-w-6xl">
         <div className="relative overflow-hidden rounded-[2rem] gradient-hero p-12 shadow-elegant md:p-20">
-          <FloatingStars />
+          
 
           <div className="relative grid items-center gap-12 md:grid-cols-2">
             <div>
