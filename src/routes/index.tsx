@@ -78,9 +78,9 @@ function Nav() {
       }`}
     >
       <div
-        className={`mx-auto flex max-w-7xl items-center justify-between px-6 transition-all duration-500 ${
+        className={`mx-auto flex max-w-7xl items-center justify-between px-6 border border-transparent transition-[padding,max-width,background-color,box-shadow,backdrop-filter] duration-500 ${
           scrolled
-            ? "glass-dark rounded-2xl py-3 shadow-elegant max-w-6xl"
+            ? "glass-dark rounded-2xl py-3 shadow-elegant max-w-6xl border-white/10"
             : ""
         }`}
       >
