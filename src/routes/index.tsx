@@ -83,14 +83,9 @@ function Nav() {
             : ""
         }`}
       >
-        <a href="#top" className="flex items-center gap-3 group">
-          <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-crimson to-[oklch(0.45_0.2_22)] shadow-glow transition-transform group-hover:scale-110">
-            <Star className="h-5 w-5 fill-cream text-cream" />
-          </div>
-          <div className="hidden sm:block">
-            <div className={`text-xs font-semibold tracking-[0.2em] ${scrolled ? "text-cream/70" : "text-cream/70"}`}>OSCEOLA</div>
-            <div className={`-mt-0.5 font-display text-sm font-semibold ${scrolled ? "text-cream" : "text-cream"}`}>Republican Business Network</div>
-          </div>
+        <a href="#top" className="flex flex-col">
+          <div className={`text-xs font-semibold tracking-[0.2em] ${scrolled ? "text-cream/70" : "text-cream/70"}`}>OSCEOLA</div>
+          <div className={`-mt-0.5 font-display text-sm font-semibold ${scrolled ? "text-cream" : "text-cream"}`}>Republican Business Network</div>
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-cream/80">
           <a href="#benefits" className="hover:text-cream transition">Why Join</a>
