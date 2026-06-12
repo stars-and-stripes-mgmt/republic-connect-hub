@@ -161,24 +161,6 @@ function Hero() {
           </a>
         </div>
 
-        {/* Hero glass card preview */}
-        <div className="reveal mt-20 grid w-full max-w-4xl grid-cols-2 gap-4 sm:grid-cols-4" style={{ transitionDelay: "400ms" }}>
-          {[
-            { icon: Users, label: "Members" },
-            { icon: HandshakeIcon, label: "Partnerships" },
-            { icon: TrendingUp, label: "Growth" },
-            { icon: ShieldCheck, label: "Trust" },
-          ].map(({ icon: Icon, label }, i) => (
-            <div
-              key={label}
-              className="glass-dark group rounded-2xl p-5 transition-all duration-500 hover:-translate-y-1 hover:border-gold/40"
-              style={{ animation: `float 6s ease-in-out ${i * 0.3}s infinite` }}
-            >
-              <Icon className="mx-auto h-6 w-6 text-gold transition-transform group-hover:scale-110" />
-              <div className="mt-2 text-xs font-medium tracking-wide text-cream/70">{label}</div>
-            </div>
-          ))}
-        </div>
       </div>
 
       {/* Scroll hint */}
