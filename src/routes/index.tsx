@@ -381,7 +381,7 @@ function CTA() {
     <section id="join" className="relative overflow-hidden px-6 py-32">
       <div className="mx-auto max-w-6xl">
         <div className="relative overflow-hidden rounded-[2rem] gradient-hero p-12 shadow-elegant md:p-20">
-          <FloatingStars />
+          
 
           <div className="relative grid items-center gap-12 md:grid-cols-2">
             <div>
