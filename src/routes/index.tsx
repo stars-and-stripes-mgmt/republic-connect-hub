@@ -78,9 +78,9 @@ function Nav() {
       }`}
     >
       <div
-        className={`mx-auto flex max-w-7xl items-center justify-between px-6 transition-all duration-500 ${
+        className={`mx-auto flex max-w-7xl items-center justify-between px-6 border border-transparent transition-[padding,max-width,background-color,box-shadow,backdrop-filter] duration-500 ${
           scrolled
-            ? "glass-dark rounded-2xl py-3 shadow-elegant max-w-6xl"
+            ? "glass-dark rounded-2xl py-3 shadow-elegant max-w-6xl border-white/10"
             : ""
         }`}
       >
@@ -137,6 +137,14 @@ function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-navy-deep/40 via-navy-deep/60 to-navy-deep" />
 
+      {/* Hero logo watermark */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <img
+          src={logoAsset.url}
+          alt=""
+          className="w-72 h-72 md:w-96 md:h-96 rounded-full opacity-[0.06]"
+        />
+      </div>
 
       <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-6 pt-32 pb-24 text-center">
         <div className="reveal inline-flex items-center gap-2 rounded-full border border-cream/20 bg-cream/5 px-4 py-1.5 text-xs font-medium tracking-wide text-cream/90 backdrop-blur-md">
