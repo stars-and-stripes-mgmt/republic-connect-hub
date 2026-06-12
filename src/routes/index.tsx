@@ -18,7 +18,7 @@ import heroFlag from "@/assets/hero-flag.jpg";
 import networking from "@/assets/networking.jpg";
 import eagle from "@/assets/eagle.jpg";
 import { useReveal } from "@/hooks/use-reveal";
-import { Counter } from "@/components/Counter";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
