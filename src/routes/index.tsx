@@ -78,21 +78,21 @@ function Nav() {
       }`}
     >
       <div
-        className={`mx-auto flex max-w-7xl items-center justify-between px-6 border border-transparent transition-[padding,max-width,background-color,box-shadow,backdrop-filter] duration-500 ${
+        className={`mx-auto flex max-w-7xl items-center justify-between px-4 border border-transparent transition-[padding,max-width,background-color,box-shadow,backdrop-filter] duration-500 ${
           scrolled
             ? "glass-dark rounded-2xl py-3 shadow-elegant max-w-6xl border-white/10"
             : ""
         }`}
       >
-        <a href="#top" className="flex items-center gap-3 group">
+        <a href="#top" className="flex items-center gap-3 group shrink-0">
           <img
             src={logoAsset.url}
             alt="Osceola Republican Business Network logo"
-            className="h-11 w-11 rounded-full bg-cream/95 p-0.5 shadow-elegant transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
+            className="h-10 w-10 sm:h-11 sm:w-11 rounded-full bg-cream/95 p-0.5 shadow-elegant transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
           />
           <div className="flex flex-col leading-tight">
-            <span className="text-[0.65rem] font-semibold tracking-[0.2em] text-cream/70">OSCEOLA</span>
-            <span className="font-display text-sm font-semibold text-cream">Republican Business Network</span>
+            <span className="text-[0.6rem] sm:text-[0.65rem] font-semibold tracking-[0.2em] text-cream/70">OSCEOLA</span>
+            <span className="font-display text-[0.7rem] sm:text-sm font-semibold text-cream leading-tight">Republican Business Network</span>
           </div>
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-cream/80">
@@ -101,8 +101,8 @@ function Nav() {
           <a href="#voices" className="hover:text-cream transition">Voices</a>
           <a href="#join" className="hover:text-cream transition">Contact</a>
         </nav>
-        <a href="#join" className="btn-primary text-sm">
-          Join Us <ArrowRight className="h-4 w-4" />
+        <a href="#join" className="btn-primary text-xs sm:text-sm !px-3 !py-2 sm:!px-4 sm:!py-2.5">
+          Join Us <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4" />
         </a>
       </div>
     </header>
@@ -146,28 +146,28 @@ function Hero() {
         />
       </div>
 
-      <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-6 pt-32 pb-40 text-center">
-        <div className="reveal inline-flex items-center gap-2 rounded-full border border-cream/20 bg-cream/5 px-4 py-1.5 text-xs font-medium tracking-wide text-cream/90 backdrop-blur-md">
-          <Sparkles className="h-3.5 w-3.5 text-gold" />
+      <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-6 pt-28 pb-32 text-center">
+        <div className="reveal inline-flex items-center gap-2 rounded-full border border-cream/20 bg-cream/5 px-3 py-1.5 text-xs font-medium tracking-wide text-cream/90 backdrop-blur-md">
+          <Sparkles className="h-3 w-3 text-gold" />
           A New Community of Business Leaders
         </div>
 
-        <h1 className="reveal mt-8 max-w-5xl font-display text-5xl font-semibold leading-[1.05] text-cream sm:text-6xl md:text-7xl lg:text-8xl" style={{ transitionDelay: "100ms" }}>
+        <h1 className="reveal mt-6 max-w-5xl font-display text-4xl font-semibold leading-[1.1] text-cream sm:text-6xl md:text-7xl lg:text-8xl" style={{ transitionDelay: "100ms" }}>
           Where Business{" "}
           <span className="text-gradient-gold">Meets Conviction.</span>
         </h1>
 
-        <p className="reveal mt-8 max-w-2xl text-lg leading-relaxed text-cream/75 sm:text-xl" style={{ transitionDelay: "200ms" }}>
+        <p className="reveal mt-6 max-w-2xl text-base leading-relaxed text-cream/75 sm:text-lg md:text-xl" style={{ transitionDelay: "200ms" }}>
           The Osceola Republican Business Network is an exclusive community where like-minded
           professionals connect, learn, and grow — together.
         </p>
 
-        <div className="reveal mt-10 flex flex-wrap items-center justify-center gap-4" style={{ transitionDelay: "300ms" }}>
-          <a href="#join" className="btn-primary animate-pulse-glow text-base">
+        <div className="reveal mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4" style={{ transitionDelay: "300ms" }}>
+          <a href="#join" className="btn-primary animate-pulse-glow text-sm sm:text-base !px-4 !py-2.5 sm:!px-5 sm:!py-3">
             Join the Network
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </a>
-          <a href="#benefits" className="btn-ghost-light text-base">
+          <a href="#benefits" className="btn-ghost-light text-sm sm:text-base !px-4 !py-2.5 sm:!px-5 sm:!py-3">
             Learn More
           </a>
         </div>
@@ -191,12 +191,12 @@ function Stats() {
     { icon: ShieldCheck, label: "Trust" },
   ];
   return (
-    <section className="relative -mt-16 px-6">
-      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-4 rounded-3xl border border-border bg-card p-8 shadow-elegant md:grid-cols-4 md:p-12">
+    <section className="relative -mt-16 px-4 sm:px-6">
+      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-3 rounded-2xl border border-border bg-card p-5 shadow-elegant sm:gap-4 sm:p-8 md:grid-cols-4 md:rounded-3xl md:p-12">
         {items.map((it, i) => (
           <div key={it.label} className="reveal text-center" style={{ transitionDelay: `${i * 80}ms` }}>
-            <it.icon className="mx-auto h-8 w-8 text-crimson" />
-            <div className="mt-3 font-display text-xl font-semibold text-navy md:text-2xl">
+            <it.icon className="mx-auto h-7 w-7 sm:h-8 sm:w-8 text-crimson" />
+            <div className="mt-2 font-display text-lg font-semibold text-navy sm:text-xl md:text-2xl">
               {it.label}
             </div>
           </div>
@@ -225,36 +225,36 @@ function Benefits() {
     },
   ];
   return (
-    <section id="benefits" className="relative py-32 px-6">
+    <section id="benefits" className="relative py-24 sm:py-32 px-6">
       <div className="mx-auto max-w-6xl">
         <div className="reveal mx-auto max-w-2xl text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted px-3 py-1 text-xs font-medium uppercase tracking-wider text-crimson">
             <Star className="h-3 w-3 fill-crimson" /> Why Join Us
           </div>
-          <h2 className="mt-6 font-display text-4xl font-semibold leading-tight text-navy md:text-5xl">
+          <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-navy sm:text-4xl md:text-5xl">
             Built for those who lead — and those who plan to.
           </h2>
-          <p className="mt-5 text-lg text-muted-foreground">
+          <p className="mt-4 text-base text-muted-foreground sm:text-lg">
             Whether you're growing a business, exploring new opportunities, or surrounding yourself
             with inspiring people, this is where it begins.
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-5 sm:mt-16 sm:gap-6 md:grid-cols-3">
           {benefits.map((b, i) => (
             <div
               key={b.title}
-              className="reveal group relative overflow-hidden rounded-3xl border border-border bg-card p-8 transition-all duration-500 hover:-translate-y-2 hover:border-crimson/30 hover:shadow-elegant"
+              className="reveal group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-border bg-card p-6 sm:p-8 transition-all duration-500 hover:-translate-y-2 hover:border-crimson/30 hover:shadow-elegant"
               style={{ transitionDelay: `${i * 120}ms` }}
             >
               {/* Hover gradient */}
               <div className="absolute inset-0 -z-10 bg-gradient-to-br from-crimson/0 to-gold/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" style={{ background: "radial-gradient(circle at top right, oklch(0.55 0.22 25 / 0.08), transparent 60%)" }} />
 
-              <div className="grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-navy to-navy-deep shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
-                <b.icon className="h-6 w-6 text-gold" />
+              <div className="grid h-12 w-12 sm:h-14 sm:w-14 place-items-center rounded-xl sm:rounded-2xl bg-gradient-to-br from-navy to-navy-deep shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
+                <b.icon className="h-5 w-5 sm:h-6 sm:w-6 text-gold" />
               </div>
-              <h3 className="mt-6 font-display text-2xl font-semibold text-navy">{b.title}</h3>
-              <p className="mt-3 leading-relaxed text-muted-foreground">{b.body}</p>
+              <h3 className="mt-5 font-display text-xl font-semibold text-navy sm:text-2xl">{b.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">{b.body}</p>
             </div>
           ))}
         </div>
@@ -265,11 +265,11 @@ function Benefits() {
 
 function About() {
   return (
-    <section id="about" className="relative overflow-hidden bg-gradient-to-b from-cream to-muted/50 py-32 px-6">
-      <div className="mx-auto grid max-w-6xl items-center gap-16 md:grid-cols-2">
+    <section id="about" className="relative overflow-hidden bg-gradient-to-b from-cream to-muted/50 py-24 sm:py-32 px-6">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 sm:gap-16 md:grid-cols-2">
         <div className="reveal relative">
-          <div className="absolute -left-6 -top-6 h-24 w-24 rounded-2xl bg-gradient-to-br from-gold/40 to-crimson/30 blur-2xl" />
-          <div className="relative overflow-hidden rounded-3xl shadow-elegant">
+          <div className="absolute -left-4 -top-4 sm:-left-6 sm:-top-6 h-20 w-20 sm:h-24 sm:w-24 rounded-2xl bg-gradient-to-br from-gold/40 to-crimson/30 blur-2xl" />
+          <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl shadow-elegant">
             <img
               src={networking}
               alt="Business leaders networking at a Republican Business Network event"
@@ -280,14 +280,14 @@ function About() {
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-navy-deep/30 via-transparent to-transparent" />
           </div>
-          <div className="absolute -bottom-6 -right-4 glass rounded-2xl p-5 shadow-elegant md:-right-10">
+          <div className="absolute -bottom-5 -right-2 glass rounded-xl p-3 shadow-elegant sm:-bottom-6 sm:-right-4 sm:rounded-2xl sm:p-5 md:-right-10">
             <div className="flex items-center gap-3">
-              <div className="grid h-10 w-10 place-items-center rounded-xl bg-crimson">
-                <Quote className="h-5 w-5 text-cream" />
+              <div className="grid h-8 w-8 sm:h-10 sm:w-10 place-items-center rounded-lg sm:rounded-xl bg-crimson">
+                <Quote className="h-4 w-4 sm:h-5 sm:w-5 text-cream" />
               </div>
               <div>
-                <div className="text-xs font-medium text-muted-foreground">Founded</div>
-                <div className="font-display text-lg font-semibold text-navy">Osceola County</div>
+                <div className="text-[0.65rem] sm:text-xs font-medium text-muted-foreground">Founded</div>
+                <div className="font-display text-sm sm:text-lg font-semibold text-navy">Osceola County</div>
               </div>
             </div>
           </div>
@@ -297,14 +297,14 @@ function About() {
           <div className="reveal inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium uppercase tracking-wider text-crimson">
             <Star className="h-3 w-3 fill-crimson" /> Our Community
           </div>
-          <h2 className="reveal mt-5 font-display text-4xl font-semibold leading-tight text-navy md:text-5xl" style={{ transitionDelay: "80ms" }}>
+          <h2 className="reveal mt-5 font-display text-3xl font-semibold leading-tight text-navy sm:text-4xl md:text-5xl" style={{ transitionDelay: "80ms" }}>
             A brand-new network. <br /> A lasting connection.
           </h2>
-          <p className="reveal mt-6 text-lg leading-relaxed text-muted-foreground" style={{ transitionDelay: "160ms" }}>
+          <p className="reveal mt-4 text-base leading-relaxed text-muted-foreground sm:mt-6 sm:text-lg" style={{ transitionDelay: "160ms" }}>
             Welcome to our brand-new Republican Business Network — a space to engage in meaningful
             discussions, share insights, and support each other on the journey to success.
           </p>
-          <ul className="mt-8 space-y-4">
+          <ul className="mt-6 sm:mt-8 space-y-3 sm:space-y-4">
             {[
               "Engage in meaningful, member-driven conversations",
               "Share expertise across industries and generations",
@@ -315,7 +315,7 @@ function About() {
                 <div className="mt-1 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-crimson/10 text-crimson">
                   <Check className="h-3.5 w-3.5" strokeWidth={3} />
                 </div>
-                <span className="text-foreground">{line}</span>
+                <span className="text-sm sm:text-base text-foreground">{line}</span>
               </li>
             ))}
           </ul>
@@ -327,27 +327,27 @@ function About() {
 
 function Testimonials() {
   return (
-    <section id="voices" className="relative overflow-hidden py-32 px-6">
+    <section id="voices" className="relative overflow-hidden py-24 sm:py-32 px-6">
       <div className="mx-auto max-w-6xl">
         <div className="reveal mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-4xl font-semibold leading-tight text-navy md:text-5xl">
+          <h2 className="font-display text-3xl font-semibold leading-tight text-navy sm:text-4xl md:text-5xl">
             Strength in shared purpose.
           </h2>
-          <p className="mt-5 text-lg text-muted-foreground">
+          <p className="mt-4 text-base text-muted-foreground sm:mt-5 sm:text-lg">
             Real conversations with the people building Osceola's future.
           </p>
         </div>
 
-        <div className="mt-16 grid items-stretch gap-6 md:grid-cols-3">
-          <div className="reveal relative overflow-hidden rounded-3xl bg-navy-deep p-1 md:row-span-2">
-            <img src={eagle} alt="Eagle" loading="lazy" width={1024} height={1024} className="h-full w-full rounded-[1.4rem] object-cover opacity-70" />
-            <div className="absolute inset-0 rounded-[1.4rem] bg-gradient-to-t from-navy-deep via-navy-deep/40 to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 p-8">
-              <Star className="h-6 w-6 fill-gold text-gold" />
-              <div className="mt-3 font-display text-2xl font-semibold leading-snug text-cream">
+        <div className="mt-12 grid items-stretch gap-5 sm:mt-16 sm:gap-6 md:grid-cols-3">
+          <div className="reveal relative overflow-hidden rounded-2xl sm:rounded-3xl bg-navy-deep p-1 md:row-span-2">
+            <img src={eagle} alt="Eagle" loading="lazy" width={1024} height={1024} className="h-full w-full rounded-[1.2rem] sm:rounded-[1.4rem] object-cover opacity-70" />
+            <div className="absolute inset-0 rounded-[1.2rem] sm:rounded-[1.4rem] bg-gradient-to-t from-navy-deep via-navy-deep/40 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
+              <Star className="h-5 w-5 sm:h-6 sm:w-6 fill-gold text-gold" />
+              <div className="mt-2 sm:mt-3 font-display text-lg sm:text-2xl font-semibold leading-snug text-cream">
                 "Surround yourself with people who lift you higher."
               </div>
-              <div className="mt-4 text-sm text-cream/60">— Our Guiding Principle</div>
+              <div className="mt-3 sm:mt-4 text-xs sm:text-sm text-cream/60">— Our Guiding Principle</div>
             </div>
           </div>
 
@@ -367,14 +367,14 @@ function Testimonials() {
           ].map((t, i) => (
             <div
               key={i}
-              className="reveal group relative overflow-hidden rounded-3xl border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:shadow-elegant"
+              className="reveal group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-border bg-card p-6 sm:p-8 transition-all hover:-translate-y-1 hover:shadow-elegant"
               style={{ transitionDelay: `${i * 120}ms` }}
             >
-              <Quote className="h-8 w-8 text-crimson/30 transition-colors group-hover:text-crimson" />
-              <p className="mt-4 text-lg leading-relaxed text-foreground">{t.quote}</p>
-              <div className="mt-6 border-t border-border pt-4">
-                <div className="font-semibold text-navy">{t.name}</div>
-                <div className="text-sm text-muted-foreground">{t.role}</div>
+              <Quote className="h-6 w-6 sm:h-8 sm:w-8 text-crimson/30 transition-colors group-hover:text-crimson" />
+              <p className="mt-3 sm:mt-4 text-base sm:text-lg leading-relaxed text-foreground">{t.quote}</p>
+              <div className="mt-4 sm:mt-6 border-t border-border pt-3 sm:pt-4">
+                <div className="font-semibold text-sm sm:text-base text-navy">{t.name}</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">{t.role}</div>
               </div>
             </div>
           ))}
@@ -386,26 +386,26 @@ function Testimonials() {
 
 function CTA() {
   return (
-    <section id="join" className="relative overflow-hidden px-6 py-32">
+    <section id="join" className="relative overflow-hidden px-4 sm:px-6 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl">
-        <div className="relative overflow-hidden rounded-[2rem] gradient-hero p-12 shadow-elegant md:p-20">
+        <div className="relative overflow-hidden rounded-[1.5rem] gradient-hero p-6 shadow-elegant sm:p-12 md:rounded-[2rem] md:p-20">
           
 
-          <div className="relative grid items-center gap-12 md:grid-cols-2">
+          <div className="relative grid items-center gap-8 sm:gap-12 md:grid-cols-2">
             <div>
-              <div className="reveal inline-flex items-center gap-2 rounded-full border border-cream/20 bg-cream/5 px-4 py-1.5 text-xs font-medium text-cream/90 backdrop-blur-md">
-                <Sparkles className="h-3.5 w-3.5 text-gold" /> Ready to Join?
+              <div className="reveal inline-flex items-center gap-2 rounded-full border border-cream/20 bg-cream/5 px-3 sm:px-4 py-1.5 text-xs font-medium text-cream/90 backdrop-blur-md">
+                <Sparkles className="h-3 w-3 text-gold" /> Ready to Join?
               </div>
-              <h2 className="reveal mt-6 font-display text-4xl font-semibold leading-tight text-cream md:text-5xl" style={{ transitionDelay: "80ms" }}>
+              <h2 className="reveal mt-5 sm:mt-6 font-display text-3xl font-semibold leading-tight text-cream sm:text-4xl md:text-5xl" style={{ transitionDelay: "80ms" }}>
                 Your seat at the table <br />
                 <span className="text-gradient-gold">is waiting.</span>
               </h2>
-              <p className="reveal mt-6 text-lg leading-relaxed text-cream/75" style={{ transitionDelay: "160ms" }}>
+              <p className="reveal mt-4 text-sm sm:text-base leading-relaxed text-cream/75 sm:mt-6 sm:text-lg" style={{ transitionDelay: "160ms" }}>
                 Provide your contact information to stay updated and be part of this exciting new
                 group. We look forward to welcoming you to our community.
               </p>
 
-              <div className="reveal mt-10 space-y-4" style={{ transitionDelay: "240ms" }}>
+              <div className="reveal mt-8 space-y-3 sm:mt-10 sm:space-y-4" style={{ transitionDelay: "240ms" }}>
                 <ContactItem icon={Users} label="Contact" value="Corey Pellerin" />
                 <ContactItem icon={Phone} label="Phone" value="407-346-0011" href="tel:4073460011" />
                 <ContactItem icon={Mail} label="Email" value="Cpellerin62@gmail.com" href="mailto:Cpellerin62@gmail.com" />
@@ -428,14 +428,14 @@ function ContactItem({ icon: Icon, label, value, href }: { icon: typeof Phone; l
   return (
     <Comp
       href={href}
-      className="group flex items-center gap-4 rounded-2xl border border-cream/10 bg-cream/5 p-4 transition-all hover:border-gold/40 hover:bg-cream/10"
+      className="group flex items-center gap-3 sm:gap-4 rounded-xl sm:rounded-2xl border border-cream/10 bg-cream/5 p-3 sm:p-4 transition-all hover:border-gold/40 hover:bg-cream/10"
     >
-      <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-cream/10 transition-colors group-hover:bg-crimson">
-        <Icon className="h-5 w-5 text-gold transition-colors group-hover:text-cream" />
+      <div className="grid h-9 w-9 sm:h-11 sm:w-11 shrink-0 place-items-center rounded-lg sm:rounded-xl bg-cream/10 transition-colors group-hover:bg-crimson">
+        <Icon className="h-4 w-4 sm:h-5 sm:w-5 text-gold transition-colors group-hover:text-cream" />
       </div>
       <div className="min-w-0">
-        <div className="text-xs uppercase tracking-wider text-cream/50">{label}</div>
-        <div className="truncate font-medium text-cream">{value}</div>
+        <div className="text-[0.65rem] sm:text-xs uppercase tracking-wider text-cream/50">{label}</div>
+        <div className="truncate text-sm sm:text-base font-medium text-cream">{value}</div>
       </div>
     </Comp>
   );
@@ -449,16 +449,16 @@ function JoinForm() {
         e.preventDefault();
         setSubmitted(true);
       }}
-      className="glass-dark space-y-4 rounded-3xl p-8 shadow-elegant"
+      className="glass-dark space-y-3 sm:space-y-4 rounded-2xl p-6 shadow-elegant sm:rounded-3xl sm:p-8"
     >
-      <div className="font-display text-2xl font-semibold text-cream">Stay in the loop</div>
-      <p className="text-sm text-cream/60">Drop your details — we'll be in touch soon.</p>
+      <div className="font-display text-xl sm:text-2xl font-semibold text-cream">Stay in the loop</div>
+      <p className="text-xs sm:text-sm text-cream/60">Drop your details — we'll be in touch soon.</p>
 
       {submitted ? (
-        <div className="rounded-2xl bg-gold/15 border border-gold/30 p-6 text-center">
-          <Check className="mx-auto h-8 w-8 text-gold" />
-          <div className="mt-3 font-display text-xl text-cream">Welcome aboard!</div>
-          <p className="mt-1 text-sm text-cream/70">We'll be in touch with next steps shortly.</p>
+        <div className="rounded-xl sm:rounded-2xl bg-gold/15 border border-gold/30 p-5 sm:p-6 text-center">
+          <Check className="mx-auto h-7 w-7 sm:h-8 sm:w-8 text-gold" />
+          <div className="mt-2 sm:mt-3 font-display text-lg sm:text-xl text-cream">Welcome aboard!</div>
+          <p className="mt-1 text-xs sm:text-sm text-cream/70">We'll be in touch with next steps shortly.</p>
         </div>
       ) : (
         <>
@@ -466,8 +466,8 @@ function JoinForm() {
           <Field label="Email" name="email" type="email" placeholder="jane@business.com" />
           <Field label="Phone" name="phone" type="tel" placeholder="(407) 555-0123" />
           <Field label="Business / Industry" name="biz" placeholder="What do you do?" />
-          <button type="submit" className="btn-primary w-full justify-center">
-            Click Here to Join Us <ArrowRight className="h-4 w-4" />
+          <button type="submit" className="btn-primary w-full justify-center text-sm sm:text-base">
+            Click Here to Join Us <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
           </button>
         </>
       )}
@@ -478,13 +478,13 @@ function JoinForm() {
 function Field({ label, name, type = "text", placeholder }: { label: string; name: string; type?: string; placeholder?: string }) {
   return (
     <label className="block">
-      <span className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-cream/60">{label}</span>
+      <span className="mb-1.5 block text-[0.65rem] sm:text-xs font-medium uppercase tracking-wider text-cream/60">{label}</span>
       <input
         name={name}
         type={type}
         placeholder={placeholder}
         required
-        className="w-full rounded-xl border border-cream/15 bg-cream/5 px-4 py-3 text-cream placeholder:text-cream/30 outline-none transition focus:border-gold/60 focus:bg-cream/10"
+        className="w-full rounded-lg sm:rounded-xl border border-cream/15 bg-cream/5 px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base text-cream placeholder:text-cream/30 outline-none transition focus:border-gold/60 focus:bg-cream/10"
       />
     </label>
   );
@@ -492,20 +492,20 @@ function Field({ label, name, type = "text", placeholder }: { label: string; nam
 
 function Footer() {
   return (
-    <footer className="border-t border-border bg-navy-deep px-6 py-12 text-cream/70">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 md:flex-row">
+    <footer className="border-t border-border bg-navy-deep px-4 sm:px-6 py-10 sm:py-12 text-cream/70">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 sm:gap-6 md:flex-row">
         <a href="#top" className="flex items-center gap-3 group">
           <img
             src={logoAsset.url}
             alt="Osceola Republican Business Network logo"
-            className="h-9 w-9 rounded-full bg-cream/95 p-0.5 shadow-elegant transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
+            className="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-cream/95 p-0.5 shadow-elegant transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
           />
-          <div className="text-sm leading-tight">
+          <div className="text-xs sm:text-sm leading-tight">
             <div className="font-semibold text-cream">Osceola Republican Business Network</div>
-            <div className="text-xs text-cream/50">Connect. Grow. Lead.</div>
+            <div className="text-[0.65rem] sm:text-xs text-cream/50">Connect. Grow. Lead.</div>
           </div>
         </a>
-        <div className="text-xs text-cream/50">
+        <div className="text-[0.65rem] sm:text-xs text-cream/50">
           © {new Date().getFullYear()} Osceola Republican Business Network. All rights reserved.
         </div>
       </div>
