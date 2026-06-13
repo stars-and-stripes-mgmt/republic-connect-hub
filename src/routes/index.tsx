@@ -17,7 +17,6 @@ import {
 import heroFlag from "@/assets/hero-flag.jpg";
 import networking from "@/assets/networking.jpg";
 import eagle from "@/assets/eagle.jpg";
-import logoAsset from "@/assets/logo.png.asset.json";
 import { useReveal } from "@/hooks/use-reveal";
 
 
@@ -86,9 +85,9 @@ function Nav() {
       >
         <a href="#top" className="flex items-center gap-3 group shrink-0">
           <img
-            src={logoAsset.url}
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23B8860B'/%3E%3Cstop offset='100%25' stop-color='%238B0000'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='48' fill='url(%23g)'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-family='Georgia,serif' font-size='28' font-weight='bold' fill='white'%3EO%3C/text%3E%3C/svg%3E"
             alt="Osceola Republican Business Network logo"
-            className="h-10 w-10 sm:h-11 sm:w-11 rounded-full bg-cream/95 p-0.5 shadow-elegant transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
+            className="h-10 w-10 sm:h-11 sm:w-11 rounded-full shadow-elegant transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
           />
           <div className="flex flex-col leading-tight">
             <span className="text-[0.6rem] sm:text-[0.65rem] font-semibold tracking-[0.2em] text-cream/70">OSCEOLA</span>
@@ -139,11 +138,7 @@ function Hero() {
 
       {/* Hero logo watermark */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <img
-          src={logoAsset.url}
-          alt=""
-          className="w-72 h-72 md:w-96 md:h-96 rounded-full opacity-[0.06]"
-        />
+          <div className="w-72 h-72 md:w-96 md:h-96 rounded-full opacity-[0.06] bg-gradient-to-br from-gold to-crimson" />
       </div>
 
       <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-6 pt-28 pb-32 text-center">
@@ -496,9 +491,9 @@ function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 sm:gap-6 md:flex-row">
         <a href="#top" className="flex items-center gap-3 group">
           <img
-            src={logoAsset.url}
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23B8860B'/%3E%3Cstop offset='100%25' stop-color='%238B0000'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='48' fill='url(%23g)'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-family='Georgia,serif' font-size='28' font-weight='bold' fill='white'%3EO%3C/text%3E%3C/svg%3E"
             alt="Osceola Republican Business Network logo"
-            className="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-cream/95 p-0.5 shadow-elegant transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
+            className="h-8 w-8 sm:h-9 sm:w-9 rounded-full shadow-elegant transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
           />
           <div className="text-xs sm:text-sm leading-tight">
             <div className="font-semibold text-cream">Osceola Republican Business Network</div>
